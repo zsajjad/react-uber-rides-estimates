@@ -1,0 +1,26 @@
+{
+  "name": "react-native-uber-rides-estimates",
+  "version": "0.1.0",
+  "description": "React Native Higher Order Component to get Uber Rides Estimates",
+  "main": "src/react-native-uber-rides-estimates.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsajjad/react-native-uber-rides-estimates.git"
+  },
+  "keywords": ["react-native", "uber", "estimates"],
+  "author": {
+    "name": "Zain Sajjad",
+    "email": "zsajjad93@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsajjad/react-native-uber-rides-estimates/issues"
+  },
+  "homepage": "https://github.com/zsajjad/react-native-uber-rides-estimates",
+  "peerDependencies": {
+    "react": "^15.5.0",
+    "react-dom": "^15.5.0",
+    "prop-types": "^15.5.10",
+    "query-string": "^5.0.0"
+  }
+}

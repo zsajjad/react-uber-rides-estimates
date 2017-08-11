@@ -20,13 +20,23 @@ class RNUberRides extends React.Component {
     this.setState({ loading: true });
     Controller.getTimeEstimates(params)
       .then(timeEstimate => {
+        if (timeEstimate.times) {
+          this.setState({
+            timeEstimate: Controller.getLinks(params, timeEstimate.times),
+            loading: false
+          });
+          return;
+        }
         this.setState({
-          timeEstimate: Controller.getLinks(params, timeEstimate.times),
           loading: false
         });
       })
       .catch(err => {
-        this.setState({ error: true, loading: false });
+        this.setState({
+          errorMsg: err ? err.message : "Something went wrong",
+          error: true,
+          loading: false
+        });
       });
   };
 
@@ -37,13 +47,23 @@ class RNUberRides extends React.Component {
     this.setState({ loading: true });
     Controller.getPriceEstimate(params)
       .then(priceEstimate => {
+        if (priceEstimate.prices) {
+          this.setState({
+            priceEstimate: Controller.getLinks(params, priceEstimate.prices),
+            loading: false
+          });
+          return;
+        }
         this.setState({
-          priceEstimate: Controller.getLinks(params, priceEstimate.prices),
           loading: false
         });
       })
       .catch(err => {
-        this.setState({ error: true, loading: false });
+        this.setState({
+          errorMsg: err ? err.message : "Something went wrong",
+          error: true,
+          loading: false
+        });
       });
   };
 

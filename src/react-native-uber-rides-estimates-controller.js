@@ -16,23 +16,27 @@ const HEADER = {
  * For all external call
  */
 const fetchApi = (url, method = "GET", headers = {}) => {
-  console.log(url, headers);
   return new Promise((resolve, reject) => {
     fetch(url, {
       method,
       headers
     })
       .then(response => {
-        if (response.status >= 400) {
-          reject(null);
-        }
         console.log(response);
+        if (response.status >= 400) {
+          response.json().then(responseData => {
+            reject(responseData);
+          });
+          return;
+        }
         response.json().then(responseData => {
           resolve(responseData);
         });
       })
       .catch(error => {
-        reject(error);
+        error.json().then(responseData => {
+          reject(errorData);
+        });
       });
   });
 };

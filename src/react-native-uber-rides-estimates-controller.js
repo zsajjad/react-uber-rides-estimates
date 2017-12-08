@@ -22,7 +22,6 @@ const fetchApi = (url, method = "GET", headers = {}) => {
       headers
     })
       .then(response => {
-        console.log(response);
         if (response.status >= 400) {
           response.json().then(responseData => {
             reject(responseData);

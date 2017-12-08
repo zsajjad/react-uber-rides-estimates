@@ -1,26 +1,56 @@
 {
-  "name": "react-native-uber-rides-estimates",
-  "version": "0.1.0",
-  "description": "React Native Higher Order Component to get Uber Rides Estimates",
-  "main": "src/react-native-uber-rides-estimates.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zsajjad/react-native-uber-rides-estimates.git"
+  "_args": [
+    [
+      "react-native-uber-rides-estimates@0.1.1",
+      "/Users/zainsajjad/Desktop/development/peekaboosdk"
+    ]
+  ],
+  "_from": "react-native-uber-rides-estimates@0.1.1",
+  "_id": "react-native-uber-rides-estimates@0.1.1",
+  "_inBundle": false,
+  "_integrity":
+    "sha512-oJ+8JbPPEs/+UgGHdzrfIjsUsvasdXTwmTXRIEAMlyFiIbJ7TsS8XJnYDzwvOC8t+G9pC+8qcquP33NGbRwO/g==",
+  "_location": "/react-native-uber-rides-estimates",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "react-native-uber-rides-estimates@0.1.1",
+    "name": "react-native-uber-rides-estimates",
+    "escapedName": "react-native-uber-rides-estimates",
+    "rawSpec": "0.1.1",
+    "saveSpec": null,
+    "fetchSpec": "0.1.1"
   },
-  "keywords": ["react-native", "uber", "estimates"],
+  "_requiredBy": ["/"],
+  "_resolved":
+    "https://registry.npmjs.org/react-native-uber-rides-estimates/-/react-native-uber-rides-estimates-0.1.1.tgz",
+  "_spec": "0.1.1",
+  "_where": "/Users/zainsajjad/Desktop/development/peekaboosdk",
   "author": {
     "name": "Zain Sajjad",
     "email": "zsajjad93@gmail.com"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zsajjad/react-native-uber-rides-estimates/issues"
   },
+  "description":
+    "React Native Higher Order Component to get Uber Rides Estimates",
   "homepage": "https://github.com/zsajjad/react-native-uber-rides-estimates",
+  "keywords": ["react-native", "uber", "estimates"],
+  "license": "MIT",
+  "main": "src/react-native-uber-rides-estimates.js",
+  "name": "react-native-uber-rides-estimates",
   "peerDependencies": {
     "react": "^15.5.0",
     "react-dom": "^15.5.0",
     "prop-types": "^15.5.10",
     "query-string": "^5.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url":
+      "git+https://github.com/zsajjad/react-native-uber-rides-estimates.git"
+  },
+  "version": "0.1.1"
 }

@@ -9,7 +9,8 @@ class RNUberRides extends React.Component {
       loading: false,
       products: null,
       estimates: null,
-      error: false
+      error: false,
+      notOperational: false
     };
   }
 
@@ -28,6 +29,7 @@ class RNUberRides extends React.Component {
           return;
         }
         this.setState({
+          notOperational: true,
           loading: false
         });
       })
@@ -55,6 +57,7 @@ class RNUberRides extends React.Component {
           return;
         }
         this.setState({
+          notOperational: true,
           loading: false
         });
       })

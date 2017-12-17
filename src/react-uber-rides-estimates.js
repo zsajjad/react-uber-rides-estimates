@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as Controller from "./react-native-uber-rides-estimates-controller.js";
+import * as Controller from "./react-uber-rides-estimates-controller.js";
 
 class RNUberRides extends React.Component {
   constructor(props) {

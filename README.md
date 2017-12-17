@@ -1,11 +1,11 @@
-# React Native UBER Rides Estimates
-> React Native Higher Order Component to get Uber Rides Estimates
+# React UBER Rides Estimates
+> React Higher Order Component to get Uber Rides Estimates
 
 ### This is not the wrapper for [UBER Rides SDK Native Solution](https://developer.uber.com/docs/riders/ride-requests/introduction). Please refer to [React Native UBER Rides](https://github.com/Kureev/react-native-uber-rides) for native solution.
 
 ## Install
 ```
-npm install react-native-uber-rides-estimates
+npm install react-uber-rides-estimates
 ```
 
 ## How to use
@@ -21,7 +21,7 @@ import {
   TouchableOpacity
 } from "react-native";
 
-import UberButton from "./app/react-native-uber-rides";
+import UberButton from "./app/react-uber-rides";
 
 export default class TestingApp extends Component {
   render() {

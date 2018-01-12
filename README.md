@@ -1,14 +1,17 @@
-# React Native UBER Rides Estimates
-> React Native Higher Order Component to get Uber Rides Estimates
+# React UBER Rides Estimates
+
+> React Higher Order Component to get Uber Rides Estimates
 
 ### This is not the wrapper for [UBER Rides SDK Native Solution](https://developer.uber.com/docs/riders/ride-requests/introduction). Please refer to [React Native UBER Rides](https://github.com/Kureev/react-native-uber-rides) for native solution.
 
 ## Install
+
 ```
-npm install react-native-uber-rides-estimates
+npm install react-uber-rides-estimates
 ```
 
 ## How to use
+
 ```js
 import React, { Component } from "react";
 
@@ -21,7 +24,7 @@ import {
   TouchableOpacity
 } from "react-native";
 
-import UberButton from "./app/react-native-uber-rides";
+import UberButton from "react-uber-rides-estimates";
 
 export default class TestingApp extends Component {
   render() {
@@ -36,18 +39,10 @@ export default class TestingApp extends Component {
               return <ActivityIndicator />;
             }
             if (uberRides.priceEstimate) {
-              return (
-                <Text>
-                  {JSON.stringify(uberRides.priceEstimate)}
-                </Text>
-              );
+              return <Text>{JSON.stringify(uberRides.priceEstimate)}</Text>;
             }
             if (uberRides.timeEstimate) {
-              return (
-                <Text>
-                  {JSON.stringify(uberRides.timeEstimate)}
-                </Text>
-              );
+              return <Text>{JSON.stringify(uberRides.timeEstimate)}</Text>;
             }
             return (
               <TouchableOpacity
@@ -65,7 +60,8 @@ export default class TestingApp extends Component {
                       nickname: "Embarcadero",
                       formattedAddress: "One Embarcadero Center, San Francisco"
                     }
-                  })}
+                  })
+                }
               >
                 <View>
                   <Text>Ride with UBER</Text>
@@ -85,7 +81,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF"
-  },
+  }
 });
 
 AppRegistry.registerComponent("TestingApp", () => TestingApp);
@@ -94,6 +90,5 @@ AppRegistry.registerComponent("TestingApp", () => TestingApp);
 ### API
 
 documentation coming soon
-
 
 ### Follow me on Twitter: [@zsajjad93](https://twitter.com/zsajjad93)

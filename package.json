@@ -38,7 +38,7 @@
   "homepage": "https://github.com/zsajjad/react-uber-rides-estimates",
   "keywords": ["react-native", "react", "uber", "estimates"],
   "license": "MIT",
-  "main": "src/react-uber-rides-estimates.js",
+  "main": "src/index.js",
   "name": "react-uber-rides-estimates",
   "peerDependencies": {
     "react": "^15.5.0",
@@ -50,5 +50,5 @@
     "type": "git",
     "url": "git+https://github.com/zsajjad/react-uber-rides-estimates.git"
   },
-  "version": "0.1.2"
+  "version": "0.1.3"
 }

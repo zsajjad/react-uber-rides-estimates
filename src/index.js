@@ -14,7 +14,7 @@ class UberRides extends React.Component {
     };
   }
 
-  getTimeEstimate(params) => {
+  getTimeEstimate(params) {
     if (this.state.loading) {
       return;
     }
@@ -42,7 +42,7 @@ class UberRides extends React.Component {
       });
   };
 
-  getPriceEstimate(params) => {
+  getPriceEstimate(params) {
     if (this.state.loading) {
       return;
     }

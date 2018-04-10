@@ -1,32 +1,4 @@
 {
-  "_args": [
-    [
-      "react-uber-rides-estimates@0.1.2",
-      "/Users/zainsajjad/Desktop/development/peekaboosdk"
-    ]
-  ],
-  "_from": "react-uber-rides-estimates@0.1.2",
-  "_id": "react-uber-rides-estimates@0.1.2",
-  "_inBundle": false,
-  "_integrity":
-    "sha512-oJ+8JbPPEs/+UgGHdzrfIjsUsvasdXTwmTXRIEAMlyFiIbJ7TsS8XJnYDzwvOC8t+G9pC+8qcquP33NGbRwO/g==",
-  "_location": "/react-uber-rides-estimates",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "react-uber-rides-estimates@0.1.2",
-    "name": "react-uber-rides-estimates",
-    "escapedName": "react-uber-rides-estimates",
-    "rawSpec": "0.1.1",
-    "saveSpec": null,
-    "fetchSpec": "0.1.1"
-  },
-  "_requiredBy": ["/"],
-  "_resolved":
-    "https://registry.npmjs.org/react-uber-rides-estimates/-/react-uber-rides-estimates-0.1.1.tgz",
-  "_spec": "0.1.1",
-  "_where": "/Users/zainsajjad/Desktop/development/peekaboosdk",
   "author": {
     "name": "Zain Sajjad",
     "email": "zsajjad93@gmail.com"
@@ -34,7 +6,7 @@
   "bugs": {
     "url": "https://github.com/zsajjad/react-uber-rides-estimates/issues"
   },
-  "description": "React Higher Order Component to get Uber Rides Estimates",
+  "description": "React Component to get Uber Rides Estimates",
   "homepage": "https://github.com/zsajjad/react-uber-rides-estimates",
   "keywords": ["react-native", "react", "uber", "estimates"],
   "license": "MIT",
@@ -50,5 +22,5 @@
     "type": "git",
     "url": "git+https://github.com/zsajjad/react-uber-rides-estimates.git"
   },
-  "version": "0.1.5"
+  "version": "0.1.6"
 }

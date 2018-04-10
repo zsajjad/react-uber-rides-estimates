@@ -20,6 +20,7 @@ const fetchApi = (url, method = 'GET', headers = {}) =>
     fetch(url, {
       method,
       headers,
+      mode: 'no-cors',
     })
       .then((response) => {
         if (response.status >= 400) {

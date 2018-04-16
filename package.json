@@ -8,19 +8,27 @@
   },
   "description": "React Component to get Uber Rides Estimates",
   "homepage": "https://github.com/zsajjad/react-uber-rides-estimates",
-  "keywords": ["react-native", "react", "uber", "estimates"],
+  "keywords": [
+    "react-native",
+    "react",
+    "uber",
+    "estimates",
+    "rides",
+    "price",
+    "time"
+  ],
   "license": "MIT",
   "main": "src/index.js",
   "name": "react-uber-rides-estimates",
   "peerDependencies": {
-    "react": "^15.5.0",
-    "react-dom": "^15.5.0",
-    "prop-types": "^15.5.10",
-    "query-string": "^5.0.0"
+    "react": ">=15.5.0",
+    "react-dom": ">=15.5.0",
+    "prop-types": ">=15.5.10",
+    "query-string": ">=5.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zsajjad/react-uber-rides-estimates.git"
   },
-  "version": "0.1.6"
+  "version": "0.1.7"
 }

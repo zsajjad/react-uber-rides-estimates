@@ -20,13 +20,10 @@ const fetchApi = (url, method = 'GET', headers = {}) =>
     fetch(url, {
       method,
       headers,
-      mode: 'no-cors',
     })
       .then((response) => {
         if (response.status >= 400) {
-          response.json().then((responseData) => {
-            reject(responseData);
-          });
+          reject(responseData);
           return;
         }
         response.json().then((responseData) => {
@@ -34,9 +31,7 @@ const fetchApi = (url, method = 'GET', headers = {}) =>
         });
       })
       .catch((error) => {
-        error.json().then((errorData) => {
-          reject(errorData);
-        });
+        reject(error);
       });
   });
 
@@ -47,7 +42,9 @@ const getServerHeader = (params) => ({
 });
 
 const stringifyLinkQuery = (query) => {
-  const arr = Object.keys(query).map((key) => `${key}=${encodeURI(query[key])}`);
+  const arr = Object.keys(query).map(
+    (key) => `${key}=${encodeURI(query[key])}`
+  );
   return arr.join('&');
 };
 
@@ -78,6 +75,7 @@ export const getPriceEstimate = (params) => {
     seat_count: params.seatCount,
   };
   const url = `${BASE_URL}/estimates/price?${QS.stringify(query)}`;
+  console.log(getServerHeader(params));
   return fetchApi(url, 'GET', getServerHeader(params));
 };
 

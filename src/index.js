@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as Controller from './controller';
+import React from "react";
+import PropTypes from "prop-types";
+import * as Controller from "./controller";
 
 class UberRides extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class UberRides extends React.Component {
       products: null,
       estimates: null,
       error: false,
-      notOperational: false,
+      notOperational: false
     };
   }
 
@@ -20,27 +20,27 @@ class UberRides extends React.Component {
     }
     this.setState({ loading: true });
     Controller.getTimeEstimates(params)
-      .then((timeEstimate) => {
+      .then(timeEstimate => {
         if (timeEstimate.times) {
           this.setState({
             timeEstimate: Controller.getLinks(params, timeEstimate.times),
-            loading: false,
+            loading: false
           });
           return;
         }
         this.setState({
           notOperational: true,
-          loading: false,
+          loading: false
         });
       })
-      .catch((err) => {
+      .catch(err => {
         this.setState({
-          errorMsg: err ? err.message : 'Something went wrong',
+          errorMsg: err ? err.message : "Something went wrong",
           error: true,
-          loading: false,
+          loading: false
         });
       });
-  };
+  }
 
   getPriceEstimate(params) {
     if (this.state.loading) {
@@ -50,47 +50,47 @@ class UberRides extends React.Component {
     Controller.getPriceEstimate({
       language: this.props.language,
       serverToken: this.props.serverToken,
-      ...params,
+      ...params
     })
-      .then((priceEstimate) => {
+      .then(priceEstimate => {
         if (priceEstimate.prices) {
           this.setState({
             priceEstimate: Controller.getLinks(params, priceEstimate.prices),
-            loading: false,
+            loading: false
           });
           return;
         }
         this.setState({
           notOperational: true,
-          loading: false,
+          loading: false
         });
       })
-      .catch((err) => {
+      .catch(err => {
         this.setState({
-          errorMsg: err ? err.message : 'Something went wrong',
+          errorMsg: err ? err.message : "Something went wrong",
           error: true,
-          loading: false,
+          loading: false
         });
       });
-  };
+  }
 
   render() {
     return this.props.children({
       ...this.state,
-      getTimeEstimate: (params) =>
+      getTimeEstimate: params =>
         this.getTimeEstimate({
           ...params,
           serverToken: this.props.serverToken,
           clientId: this.props.clientId,
-          language: this.props.language,
+          language: this.props.language
         }),
-      getPriceEstimate: (params) =>
+      getPriceEstimate: params =>
         this.getPriceEstimate({
           ...params,
           serverToken: this.props.serverToken,
           clientId: this.props.clientId,
-          language: this.props.language,
-        }),
+          language: this.props.language
+        })
     });
   }
 }
@@ -99,11 +99,11 @@ UberRides.propTypes = {
   clientId: PropTypes.string.isRequired,
   serverToken: PropTypes.string.isRequired,
   language: PropTypes.string,
-  children: PropTypes.func.isRequired,
+  children: PropTypes.func.isRequired
 };
 
 UberRides.defaultProps = {
-  language: 'en_US',
+  language: "en_US"
 };
 
 export default UberRides;

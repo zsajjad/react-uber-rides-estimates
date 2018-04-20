@@ -22,7 +22,6 @@
   "name": "react-uber-rides-estimates",
   "peerDependencies": {
     "react": ">=15.5.0",
-    "react-dom": ">=15.5.0",
     "prop-types": ">=15.5.10",
     "query-string": ">=5.0.0"
   },
@@ -30,5 +29,5 @@
     "type": "git",
     "url": "git+https://github.com/zsajjad/react-uber-rides-estimates.git"
   },
-  "version": "0.1.8"
+  "version": "0.1.9"
 }
